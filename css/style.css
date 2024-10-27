@@ -93,6 +93,7 @@ main {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
+    width: 100%;
 }
 
 .card a:hover {
