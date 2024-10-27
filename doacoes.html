@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acolhe RS</title>
+
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+
+    <link rel="stylesheet" href="doacoes.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+        defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="logo Acolhe RS" title=" Acolhe RS">
+
+    </header>
+
+    <nav>
+        <button type="button" class="btn btn-secondary">Ser Voluntario</button>
+        <button type="button" class="btn btn-secondary">Abrigos</button>
+        <button type="button" class="btn btn-secondary">Desaparecidos</button>
+    </nav>
+
+
+    <section>
+        <div class="form-container">
+            <h1>Cadastre sua Doação</h1>
+            <form id="donationForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <fieldset>
+                    <legend>Materiais para Doação:</legend>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="materials" value="roupa"> Roupas</label>
+                        <label><input type="checkbox" name="materials" value="agua"> Água</label>
+                        <label><input type="checkbox" name="materials" value="higiene"> Materiais de Higiene</label>
+                        <label><input type="checkbox" name="materials" value="alimentos"> Alimentos</label>
+                        <label><input type="checkbox" name="materials" value="calçados"> Calçados</label>
+                        <label><input type="checkbox" name="materials" value="produtos-limpeza"> Produtos de
+                            Limpeza</label>
+                        <label><input type="checkbox" name="materials" value="calçados"> Outros</label>
+
+                    </div>
+                </fieldset>
+
+        
+                <div class="container mt-5">
+                    <div id="liveAlertPlaceholder"></div>
+                    <button type="button" class="btn btn-primary" id="liveAlertBtn">Cadastrar</button>
+                </div>
+            </form>
+
+            <p class="instrucao">Após enviar o formulário, dirija-se a um centro de coleta com o código de rastreio.</p>
+        </div>
+
+
+    </section>
+
+
+
+</body>
+
+<script>
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+
+    function generateTrackingCode() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let trackingCode = '';
+        for (let i = 0; i < 8; i++) {
+            trackingCode += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return trackingCode;
+    }
+
+    const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('');
+
+        alertPlaceholder.append(wrapper);
+    };
+
+    const alertTrigger = document.getElementById('liveAlertBtn');
+    if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            const trackingCode = generateTrackingCode();
+            appendAlert(`Sua doação foi registrada com sucesso! Código de rastreio: ${trackingCode}`, 'success');
+        });
+    }
+</script>
+
+
+</html>
