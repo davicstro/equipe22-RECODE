@@ -90,7 +90,7 @@ main {
     border-radius: 8px;
     z-index: 9999;
 
-    background-image: linear-gradient(to bottom, rgb(248, 45, 9),  #fa5a04);
+    background-image: linear-gradient(to bottom, rgb(7, 238, 57),  #09f4f8);
     color: black;
     background-clip: text;
     -webkit-background-clip: text;
