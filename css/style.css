@@ -672,3 +672,46 @@ footer a {
     height: auto;
     margin: 0 10px;
   }
+
+    /* Estilo do elemento li e a tooltip */
+    .tooltip-container {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+  
+      /* Estilo da tooltip */
+      .tooltip-container .tooltip-text {
+        visibility: hidden;
+        width: 160px;
+        background-color: #212121;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 8px;
+        position: absolute;
+        top: 130%; /* Ajuste para aparecer abaixo */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99999999;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+  
+      /* Seta da tooltip */
+      .tooltip-container .tooltip-text::after {
+        content: "";
+        position: absolute;
+        bottom: 100%; /* Ajuste para a seta ficar acima da tooltip */
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #212121 transparent;
+      }
+  
+      /* Exibir a tooltip ao pairar o mouse */
+      .tooltip-container:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+      }
