@@ -90,14 +90,15 @@ main {
     border-radius: 8px;
     z-index: 9999;
 
-    background-image: linear-gradient(to bottom, rgb(7, 238, 57),  #09f4f8);
+/*  background-image: linear-gradient(to bottom, rgb(7, 238, 57),  #09f4f8);*/
     color: black;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    text-shadow: 2px 2px 5px rgba(74, 83, 76, 0.5);
+     text-shadow: 2px 2px 5px rgba(55, 57, 56, 0.5);
     width: 100%;
+    background-color: #252626;
 }
 
 
