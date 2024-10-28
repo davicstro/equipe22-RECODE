@@ -114,6 +114,20 @@ main {
 
 }
 
+.mapa_texto{
+    text-align: center;
+}
+
+
+.hearder li .noturno {
+    z-index: 99999999999;
+
+}
+
+ul{
+    align-items: center;
+}
+
 .adjust p {
     width: 50%;
     height: 100%;
@@ -539,3 +553,117 @@ footer a {
         transform: scale(1.2);
     }
 }
+
+
+
+
+
+/* The switch - the box around the slider */
+#theme-toggle-button {
+    display: flex;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3em;
+    cursor: pointer;
+    margin: 8px;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    align-items: center;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked+svg #container {
+    fill: #2b4360;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked+svg #button {
+    transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+    opacity: 1;
+  }
+  
+  #toggle:checked+svg #sun {
+    opacity: 0;
+  }
+  
+  #moon {
+    opacity: 0;
+  }
+  
+  #toggle:checked+svg #moon {
+    opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+    opacity: 1;
+  }
+  
+  #toggle:checked+svg #cloud {
+    opacity: 0;
+  }
+  
+  #stars {
+    opacity: 0;
+  }
+  
+  #toggle:checked+svg #stars {
+    opacity: 1;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 5px 30px;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+  }
+  
+  .icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 3rem;
+    animation: scroll 15s linear infinite;
+  }
+  
+  .icones img {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+  }
