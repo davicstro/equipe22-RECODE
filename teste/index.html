@@ -1,91 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <title>Cards com Imagem Grande</title>
     <style>
-        .custom-img {
-            width: 100%; /* A imagem ocupa 100% da largura da coluna */
-            height: auto; /* Mantém a proporção da imagem */
-            border-radius: 8px; /* Arredonda as bordas da imagem */
-        }
-        
-        .custom-card {
-            margin-bottom: 20px; /* Espaçamento entre os cards */
-        }
+      body {
+        background-color: #f8f9fa; /* Cor de fundo suave */
+      }
+
+      .custom-img {
+        width: 100%; /* A imagem ocupa 100% da largura da coluna */
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 8px; /* Arredonda as bordas da imagem */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para a imagem */
+      }
+
+      .custom-card {
+        margin-bottom: 20px; /* Espaçamento entre os cards */
+        transition: transform 0.2s; /* Efeito de transição ao passar o mouse */
+        border: 1px solid #dee2e6; /* Borda leve nos cards */
+      }
+
+      .custom-card:hover {
+        transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+      }
+
+      .card-title {
+        font-weight: bold; /* Destaca o título do card */
+      }
+
+      .btn-primary {
+        background-color: #007bff; /* Cor de fundo personalizada */
+        border-color: #007bff; /* Borda personalizada */
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3; /* Cor ao passar o mouse */
+        border-color: #0056b3; /* Borda ao passar o mouse */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6"> <!-- Ajustado para ocupar 50% -->
-                <img src="image_processing20230908-29939-1sz4mb3.jpeg" alt="Imagem Grande" class="custom-img">
-            </div>
-            <div class="col-md-6"> <!-- O restante da largura -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 1</h5>
-                                <p class="card-text">Descrição do card 1.</p>
-                                <a href="#" class="btn btn-primary">Ação</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 2</h5>
-                                <p class="card-text">Descrição do card 2.</p>
-                                <a href="#" class="btn btn-primary">Ação</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 3</h5>
-                                <p class="card-text">Descrição do card 3.</p>
-                                <a href="#" class="btn btn-primary">Ação</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 4</h5>
-                                <p class="card-text">Descrição do card 4.</p>
-                                <a href="#" class="btn btn-primary">Ação</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 5</h5>
-                                <p class="card-text">Descrição do card 5.</p>
-                                <a href="#" class="btn btn-primary">Ação</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card custom-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 6</h5>
-                                <p class="card-text">Descrição do card 6.</p>
-                                <a href="#" class="btn btn-primary">Ação</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Ajustado para ocupar 50% -->
+          <img
+            src="image_processing20230908-29939-1sz4mb3.jpeg"
+            alt="Imagem Grande"
+            class="custom-img"
+          />
         </div>
+        <div class="col-md-6">
+          <!-- O restante da largura -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card custom-card">
+                <div class="card-body">
+                  <h5 class="card-title">Card 1</h5>
+                  <p class="card-text">Descrição do card 1.</p>
+                  <a href="#" class="btn btn-primary">Ação</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card custom-card">
+                <div class="card-body">
+                  <h5 class="card-title">Card 2</h5>
+                  <p class="card-text">Descrição do card 2.</p>
+                  <a href="#" class="btn btn-primary">Ação</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card custom-card">
+                <div class="card-body">
+                  <h5 class="card-title">Card 3</h5>
+                  <p class="card-text">Descrição do card 3.</p>
+                  <a href="#" class="btn btn-primary">Ação</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card custom-card">
+                <div class="card-body">
+                  <h5 class="card-title">Card 4</h5>
+                  <p class="card-text">Descrição do card 4.</p>
+                  <a href="#" class="btn btn-primary">Ação</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card custom-card">
+                <div class="card-body">
+                  <h5 class="card-title">Card 5</h5>
+                  <p class="card-text">Descrição do card 5.</p>
+                  <a href="#" class="btn btn-primary">Ação</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card custom-card">
+                <div class="card-body">
+                  <h5 class="card-title">Card 6</h5>
+                  <p class="card-text">Descrição do card 6.</p>
+                  <a href="#" class="btn btn-primary">Ação</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
